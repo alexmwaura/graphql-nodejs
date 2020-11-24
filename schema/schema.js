@@ -1,7 +1,14 @@
 const graphql = require("graphql")
 
+
 const {GraphQLObjectType,GraphQLString,GraphQLSchema} = graphql
 
+let books = [
+    {name: "Name Of The Wind", genre: "Fantasy", id: "1"},
+    {name: "The Final Empire", genre: "Fantasy", id: "2"},
+    {name: "The Long Earth", genre: "Sci-fi", id: "3"},
+
+]
 const BookType = new GraphQLObjectType({
     name: "Book",
     fields: ()=>({
